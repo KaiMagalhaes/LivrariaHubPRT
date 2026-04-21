@@ -1,6 +1,10 @@
+/* ------------------------------------------------NAVBAR---------------------------------------------- */
 #navbar {
   background-color: rgb(23, 73, 222);
   padding: 10px 20px;
+}
+.navbar-brand{
+    font-size: 22px;
 }
 
 .nav-link {
@@ -14,29 +18,21 @@
 .nav-link:hover {
   transform: scale(1.1);
 }
+/* ----------------------------------------------------CaixaTitulo----------------------------------------------  */
 
-.card-liv {
-  border: none;
-  border-radius: 10px;
-  transition: 0.3s;
-  background-color: var(--bs-secondary-bg);
-  height: 100%;
+header {
+  margin-top: 18px;
+  border-radius: 0 0 8px 8px; 
 }
 
-.card-liv:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+.titulo {
+  background-color: rgb(48, 58, 145);
+  color: white;
+  padding: 40px 0;
+  width: 100%;
 }
 
-.img-cap {
-  height: 200px;
-  object-fit: cover;
-  border-radius: 10px 10px 0 0;
-}
-
-.tag-loc {
-  font-size: 12px;
-  background: rgba(255,255,255,0.1);
-  padding: 2px 8px;
-  border-radius: 5px;
+/* ---------------------------------------------------------Formulário------------------------------------------------ */
+.form-select{
+   font-size: 22px;
 }
