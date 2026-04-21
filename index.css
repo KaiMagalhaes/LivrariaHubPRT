@@ -3,7 +3,7 @@
   padding: 10px 20px;
 }
 
-.lnk-ani {
+.nav-link {
   font-size: 22px;
   color: white !important;
   display: inline-block;
@@ -11,7 +11,7 @@
   transition: transform 0.3s ease;
 }
 
-.lnk-ani:hover {
+.nav-link:hover {
   transform: scale(1.1);
 }
 
