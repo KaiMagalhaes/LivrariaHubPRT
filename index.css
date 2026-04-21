@@ -36,23 +36,23 @@ header {
 /* ---------------------------------------------------------Caixa de Filtros------------------------------------------------ */
 
 .caixa-filtros-estilo {
-  background: linear-gradient(160deg, rgb(42, 34, 95), rgb(30, 25, 75));
+  background: linear-gradient(160deg, rgb(35, 15, 164), rgb(39, 26, 159));
   border-radius: 16px;
   padding: 0;
   overflow: hidden;
-  border: 1px solid rgba(150, 130, 255, 0.25);
+  border: 1px solid rgba(39, 0, 236, 0.25);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
   position: sticky;
-  top: 85px; /* fica colado enquanto faz scroll, abaixo da navbar */
+  top: 85px; 
 }
 
-/* Cabeçalho da caixa de filtros */
+
 .filtros-cabecalho {
   display: flex;
   align-items: center;
   gap: 10px;
   padding: 18px 20px;
-  background: rgba(100, 80, 220, 0.3);
+  background: rgba(38, 0, 255, 0.3);
   border-bottom: 1px solid rgba(150, 130, 255, 0.2);
   color: white;
   font-size: 17px;
@@ -63,7 +63,6 @@ header {
   font-weight: 600;
 }
 
-/* Cada grupo de filtro */
 .filtro-grupo {
   padding: 14px 20px;
   border-bottom: 1px solid rgba(150, 130, 255, 0.1);
@@ -73,7 +72,7 @@ header {
   border-bottom: none;
 }
 
-/* Label de cada filtro */
+
 .filtro-label {
   display: block;
   font-size: 13px;
@@ -84,11 +83,11 @@ header {
   letter-spacing: 0.5px;
 }
 
-/* Select dos filtros */
+
 .filtro-select {
   font-size: 15px;
   background-color: rgba(255, 255, 255, 0.08) !important;
-  border: 1px solid rgba(150, 130, 255, 0.3) !important;
+  border: 1px solid rgba(43, 0, 255, 0.3) !important;
   color: white !important;
   border-radius: 8px;
   transition: border-color 0.2s, background-color 0.2s;
@@ -96,7 +95,7 @@ header {
 
 .filtro-select:focus {
   background-color: rgba(255, 255, 255, 0.14) !important;
-  border-color: rgba(150, 130, 255, 0.7) !important;
+  border-color: rgba(41, 1, 239, 0.7) !important;
   box-shadow: 0 0 0 3px rgba(130, 100, 255, 0.2) !important;
   color: white !important;
 }
@@ -106,7 +105,6 @@ header {
   color: white;
 }
 
-/* Botão limpar filtros */
 .btn-limpar {
   display: block;
   width: calc(100% - 40px);
@@ -177,12 +175,12 @@ footer {
   text-align: center;
   padding: 20px 0;
   margin-top: 30px;
-  border-top: 1px solid rgba(150, 130, 255, 0.15);
+  border-top: 1px solid rgba(30, 0, 181, 0.15);
 }
 
 .linkFooter {
   color: rgb(188, 189, 198);
-  transitrgb(28, 39, 124)s ease, color 0.3s ease;
+  transform:gb(28, 39, 124)s ease, color 0.3s ease;
   display: inline-block;
 }
 

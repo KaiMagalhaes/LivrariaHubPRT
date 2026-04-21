@@ -10,7 +10,7 @@ const tema = document.getElementById("btnTema");
 const btnLimpar = document.getElementById("btnLimpar");
 const contadorLivros = document.getElementById("contadorLivros");
 
-/* ---Dados de exemplo (substituir pelos dados da tua BD)--- */
+
 const dds = [
   { tit: "Matemática A 10º", editora: "1", ano: "6", tipo: "4", discip: "2", prc: "18.50", img: "" },
   { tit: "Português 11º Ano", editora: "1", ano: "7", tipo: "4", discip: "1", prc: "16.90", img: "" },
@@ -20,7 +20,7 @@ const dds = [
   { tit: "Caderno de Inglês 9º", editora: "1", ano: "5", tipo: "5", discip: "4", prc: "9.90", img: "" },
 ];
 
-/* ---Render dos cards--- */
+
 function render(arr) {
   if (arr.length === 0) {
     lst.innerHTML = `<div class="col-12 sem-resultados"><i class="bi bi-search" style="font-size:2rem;"></i><br>Nenhum livro encontrado com esses filtros.</div>`;
@@ -89,5 +89,4 @@ tema.onclick = () => {
   el.setAttribute("data-bs-theme", nvo);
 };
 
-/* ---Render inicial--- */
 render(dds);
