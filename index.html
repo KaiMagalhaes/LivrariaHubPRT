@@ -5,18 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="img/comic.png" type="image/x-icon" />
     <title>LibriFlow | Início</title>
-    <!-- --------------------------------------LINKS------------------------------------------ -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
+
     <!-- -----------------------------------------------NAVBAR--------------------------------------------->
     <nav class="navbar navbar-expand-lg sticky-top" id="navbar">
       <div class="container-fluid">
@@ -25,35 +19,19 @@
           LibriFlow
         </a>
 
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navConteudo"
-        >
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navConteudo">
           <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navConteudo">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link" href="#">Início</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Livros</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Sobre</a>
-            </li>
+            <li class="nav-item"><a class="nav-link" href="#">Início</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Livros</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Sobre</a></li>
           </ul>
 
           <div class="d-flex align-items-center gap-2">
-            <input
-              type="text"
-              id="nmrBusca"
-              class="form-control"
-              placeholder="Procurar..."
-            />
+            <input type="text" id="nmrBusca" class="form-control" placeholder="Procurar..." />
             <button class="btn btn-outline-light" type="button" id="btnBusca">
               <i class="bi bi-search"></i>
             </button>
@@ -64,26 +42,35 @@
         </div>
       </div>
     </nav>
+
     <!-- ------------------------------------------------Título-------------------------------------------------- -->
     <header>
       <div class="titulo text-center">
         <h1 class="mb-1">LibriFlow Portugal</h1>
-        <h4 class="mb-0">
-          Consulte nossos livros por disciplinas, editoras, anos e tipos
-        </h4>
+        <h4 class="mb-0">Consulte nossos livros por disciplinas, editoras, anos e tipos</h4>
       </div>
     </header>
-    <!-- --------------------------------------------------Filtros---------------------------------------------------->
+
+    <!-- --------------------------------------------------Conteúdo Principal---------------------------------------------------->
     <main class="container my-5">
       <div class="row">
-        <aside class="col-md-3 mb-4">
-          <div class="card p-3 shadow-sm">
-            <h5 class="mb-3">Filtrar por:</h5>
 
-            <div class="mb-3" id="card" >
-              <div id="listaEditora"></div>
-              <select id="filtroEditora" class="form-select">
-                <option value="">Todos as editoras</option>
+        <!-- Sidebar de Filtros -->
+        <aside class="col-md-3 mb-4">
+          <div class="caixa-filtros-estilo">
+
+            <div class="filtros-cabecalho">
+              <i class="bi bi-funnel-fill"></i>
+              <h5 class="mb-0">Filtros</h5>
+            </div>
+
+            <!-- Filtro Editora -->
+            <div class="filtro-grupo">
+              <label class="filtro-label">
+                <i class="bi bi-building"></i> Editora
+              </label>
+              <select id="filtroEditora" class="form-select filtro-select">
+                <option value="">Todas as editoras</option>
                 <option value="1">Porto Editora</option>
                 <option value="2">Asa</option>
                 <option value="3">Penguin Random House</option>
@@ -94,9 +81,13 @@
               </select>
             </div>
 
-            <div class="mb-3">
-              <select id="filtroAno" class="form-select">
-                <option value="">Todos os Anos</option>
+            <!-- Filtro Ano -->
+            <div class="filtro-grupo">
+              <label class="filtro-label">
+                <i class="bi bi-calendar3"></i> Ano Escolar
+              </label>
+              <select id="filtroAno" class="form-select filtro-select">
+                <option value="">Todos os anos</option>
                 <option value="1">5º Ano</option>
                 <option value="2">6º Ano</option>
                 <option value="3">7º Ano</option>
@@ -108,8 +99,12 @@
               </select>
             </div>
 
-            <div class="mb-3">
-              <select id="filtroTipo" class="form-select">
+            <!-- Filtro Tipo -->
+            <div class="filtro-grupo">
+              <label class="filtro-label">
+                <i class="bi bi-tag"></i> Tipo
+              </label>
+              <select id="filtroTipo" class="form-select filtro-select">
                 <option value="">Todos os tipos</option>
                 <option value="1">Romance</option>
                 <option value="2">Infantil</option>
@@ -119,9 +114,13 @@
               </select>
             </div>
 
-            <div class="mb-3">
-              <select id="filtroDisciplina" class="form-select">
-                <option value="">Todos as disciplinas</option>
+            <!-- Filtro Disciplina -->
+            <div class="filtro-grupo">
+              <label class="filtro-label">
+                <i class="bi bi-book"></i> Disciplina
+              </label>
+              <select id="filtroDisciplina" class="form-select filtro-select">
+                <option value="">Todas as disciplinas</option>
                 <option value="1">Português</option>
                 <option value="2">Matemática</option>
                 <option value="3">Estudo do meio</option>
@@ -133,12 +132,33 @@
                 <option value="9">Infanto-juvenil</option>
               </select>
             </div>
+
+            <!-- Botão Limpar Filtros -->
+            <button class="btn-limpar" id="btnLimpar">
+              <i class="bi bi-x-circle"></i> Limpar filtros
+            </button>
+
           </div>
         </aside>
+
+        <!-- Grid de Livros -->
+        <div class="col-md-9">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <span id="contadorLivros" class="contador-texto">A carregar...</span>
+          </div>
+          <div class="row g-3" id="lstLiv"></div>
+        </div>
+
       </div>
     </main>
+
+    <!-- -------------------------------------------------------------Footer---------------------------------------------------- -->
     <footer>
       <script src="index.js"></script>
+      Copyright &copy; 2024 - Livraria Hub Portugal |
+      <a href="#" class="linkFooter">Política de privacidade</a> |
+      <a href="#" class="linkFooter">Termos de licença</a>
     </footer>
+
   </body>
 </html>
