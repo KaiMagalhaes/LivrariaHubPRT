@@ -1,28 +1,47 @@
-const livros = [
-    { nmr: 1, nome: "Matemática A", disciplina: "Matemática", distrito: "Braga", preco: 20.50 },
-    { nmr: 2, nome: "BioDesafios", disciplina: "Biologia", distrito: "Porto", preco: 18.00 },
-    { nmr: 3, nome: "Mensagem", disciplina: "Português", distrito: "Lisboa", preco: 15.00 }
-];
 
-const container = document.getElementById("lista-livros");
-const busca = document.getElementById("searchBar");
 
-function mostrarLivros(dados) {
-    container.innerHTML = dados.map(item => `
-        <li class="card-item">
-            <strong>${item.nome}</strong><br>
-            <span class="escola-tag">${item.disciplina}</span><br>
-            <small>${item.distrito}</small><br>
-            <b>${item.preco}€</b>
-        </li>
-    `).join('');
+const grd = document.getElementById("lstLiv");
+const bsc = document.getElementById("nmrBusca");
+const selLoc = document.getElementById("fltLoc");
+const selAno = document.getElementById("fltAno");
+const tema = document.getElementById("btnTema");
+
+function render(arr) {
+  grd.innerHTML = arr.map(l => `
+    <div class="col-12 col-md-4">
+      <div class="card card-liv">
+        <img src="https://via.placeholder.com/300x200" class="img-cap">
+        <div class="card-body">
+          <h5 class="card-title">${l.tit}</h5>
+          <span class="tag-loc">${l.loc} - ${l.ano}º Ano</span>
+          <p class="mt-2 fw-bold text-primary">${l.prc}€</p>
+        </div>
+      </div>
+    </div>
+  `).join('');
 }
 
-busca.addEventListener("input", () => {
-    const termo = busca.value.toLowerCase();
-    const filtrados = livros.filter(l => l.nome.toLowerCase().includes(termo));
-    mostrarLivros(filtrados);
-});
+function filtrar() {
+  const txt = bsc.value.toLowerCase();
+  const loc = selLoc.value;
+  const ano = selAno.value;
 
-// Inicializa a lista
-mostrarLivros(livros);
+  const res = dds.filter(l => {
+    return l.tit.toLowerCase().includes(txt) &&
+           (loc === "" || l.loc === loc) &&
+           (ano === "" || l.ano === ano);
+  });
+  render(res);
+}
+
+bsc.oninput = filtrar;
+selLoc.onchange = filtrar;
+selAno.onchange = filtrar;
+
+tema.onclick = () => {
+  const el = document.documentElement;
+  const nvo = el.getAttribute("data-bs-theme") === "dark" ? "light" : "dark";
+  el.setAttribute("data-bs-theme", nvo);
+};
+
+render(dds);

@@ -1,44 +1,42 @@
-body {
-    background-color: #f4f4f4;
-    font-family: 'DM Sans', sans-serif;
+#navbar {
+  background-color: rgb(143, 94, 44);
+  padding: 10px 20px;
 }
 
-.box-titulo {
-    background-color: rgb(81, 77, 73);
-    color: white;
-    padding: 20px;
-    border-radius: 8px;
+.lnk-ani {
+  font-size: 22px;
+  color: white !important;
+  display: inline-block;
+  text-decoration: none;
+  transition: transform 0.3s ease;
 }
 
-.link-animado {
-    display: inline-block;
-    transition: transform 0.3s ease;
-    text-decoration: none;
+.lnk-ani:hover {
+  transform: scale(1.1);
 }
 
-.link-animado:hover {
-    transform: scale(1.1);
+.card-liv {
+  border: none;
+  border-radius: 10px;
+  transition: 0.3s;
+  background-color: var(--bs-secondary-bg);
+  height: 100%;
 }
 
-#lista-livros {
-    list-style: none;
-    padding: 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
+.card-liv:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.3);
 }
 
-.card-item {
-    background: white;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+.img-cap {
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
 }
 
-.escola-tag {
-    background: #e1effe;
-    color: #1e42af;
-    padding: 2px 8px;
-    border-radius: 4px;
-    font-size: 12px;
+.tag-loc {
+  font-size: 12px;
+  background: rgba(255,255,255,0.1);
+  padding: 2px 8px;
+  border-radius: 5px;
 }
