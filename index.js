@@ -1,13 +1,15 @@
 
 
-const grd = document.getElementById("lstLiv");
+const lst = document.getElementById("listaLivros");
 const bsc = document.getElementById("nmrBusca");
-const selLoc = document.getElementById("fltLoc");
-const selAno = document.getElementById("fltAno");
+const selecAno = document.getElementById("fltAno");
+const selecTipo = document.getElementById("fltTipo");
+const selecEditora = document.getElementById("fltEditora");
+const selecDiscip= document.getElementById("fltDisciplina");
 const tema = document.getElementById("btnTema");
 
 function render(arr) {
-  grd.innerHTML = arr.map(l => `
+  lst.innerHTML = arr.map(l => `
     <div class="col-12 col-md-4">
       <div class="card card-liv">
         <img src="https://via.placeholder.com/300x200" class="img-cap">

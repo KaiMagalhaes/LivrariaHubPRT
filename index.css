@@ -36,3 +36,7 @@ header {
 .form-select{
    font-size: 22px;
 }
+#card {
+  border-radius: 12px;
+  background-color: var(--bs-secondary-bg);
+}
