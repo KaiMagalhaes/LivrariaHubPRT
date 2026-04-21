@@ -1,4 +1,4 @@
-/* ------------------------------------------------JS - LibriFlow------------------------------------------------ */
+
 
 const lst = document.getElementById("lstLiv");
 const bsc = document.getElementById("nmrBusca");
@@ -37,13 +37,14 @@ function render(arr) {
         <div class="card-body">
           <h5 class="card-title">${l.tit}</h5>
           <span class="tag-loc">${l.ano ? l.ano + "º Ano" : "Geral"}</span>
-          <p class="mt-2 fw-bold text-primary">${parseFloat(l.prc).toFixed(2)}€</p>
+          <p class="preco-liv">${parseFloat(l.prc).toFixed(2)}€</p>
         </div>
       </div>
     </div>
   `).join("");
 }
-// ------------------------------------------------------FILTROS---------------------------------------------------
+
+// --------------------------parte dos filtros-----------------------------------------------
 function filtrar() {
   const txt = bsc.value.toLowerCase();
   const editora = selecEditora.value;
@@ -82,7 +83,7 @@ selecTipo.onchange = filtrar;
 selecDiscip.onchange = filtrar;
 btnLimpar.onclick = limparFiltros;
 
-// ----------------------------------------TEMA-------------------------------------------
+// --------------------------------------BOTAO TEMA----------------------------------
 tema.onclick = () => {
   const el = document.documentElement;
   const nvo = el.getAttribute("data-bs-theme") === "dark" ? "light" : "dark";
